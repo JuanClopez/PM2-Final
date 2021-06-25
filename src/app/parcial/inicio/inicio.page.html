@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button text="Back" defaultHref="/login"></ion-back-button>
+    <ion-button (click)="openFirst()">    
+      <ion-icon slot="icon-only" name="menu"> </ion-icon>
+    </ion-button>
+    <ion-button routerLink="/create-user">
+      <ion-icon slot="icon-only" name="add"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-title>Opciones</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>Opcion 1</ion-item>
+        <ion-item>Opcion 2</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+
+
+  <ion-card *ngFor="let user  of userList | async" routerLink="/detalle-user/{{user.id}}">
+    <ion-card-header>
+      {{user.nombre_U + " " + user.apellido_U}}
+    </ion-card-header>
+    <ion-card-content>
+      Edad: {{user.edad_U}}
+    </ion-card-content>
+  </ion-card>
+
+  
+</ion-content>
+
+
+
+

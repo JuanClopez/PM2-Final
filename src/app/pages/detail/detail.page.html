@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-tittle>{{ (song | async )?.nombreCancion }}</ion-tittle>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <h3>Artista</h3>
+  <p>
+    La canción {{ (song | async)?.nombreCancion}} fue cantada por {{ (song | async)?.nombreArtista}}.
+  </p>
+  <h3>Album</h3>
+  <p>
+    Esta canción hace parte del album {{ (song | async)?.nombreAlbum}}.
+  </p>
+  <h3>Descripción</h3>
+  <p>
+    {{ (song | async)?.descripcionCancion}}
+  </p>
+  <!-- <ion-button expand="block" (click)="eliminarCancion()">ELIMINAR CANCIÓN</ion-button> -->
+  
+</ion-content>

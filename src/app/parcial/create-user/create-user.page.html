@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="inicio" text="Regresar" color="primary"></ion-back-button>    
+    </ion-buttons>
+    <ion-title>Create User</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="crearUsuarioFormulario" (submit)="crearUsuario()">
+    <ion-item>
+      <ion-label>Nombre Paciente</ion-label>
+      <ion-input formControlName="nombre_U" type="text"
+       placeholder="Ingrese su nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Apellidos Paciente</ion-label>
+      <ion-input formControlName="apellido_U" type="text"
+       placeholder="Ingrese sus apellidos"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Edad</ion-label>
+      <ion-input formControlName="edad_U" type="number"
+       placeholder="Ingrese su edad"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Dirección</ion-label>
+      <ion-input formControlName="direccion_U" type="text"
+       placeholder="Ingrese su dirección"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Estado Civil</ion-label>
+      <ion-input formControlName="estado_civil_U" type="text"
+       placeholder="Ingrese su Estado Civil"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Telefono</ion-label>
+      <ion-input formControlName="telefono_U" type="number"
+       placeholder="Ingrese su Telefono"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Profesion</ion-label>
+      <ion-input formControlName="profesion_U" type="text"
+       placeholder="Ingrese su ocupación"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Estrato</ion-label>
+      <ion-input formControlName="estrato_U" type="number"
+       placeholder="Ingrese su estrato"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Cargo</ion-label>
+      <ion-input formControlName="cargo_U" type="text"
+       placeholder="Ingrese su cargo"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Horas trabajadas por dia</ion-label>
+      <ion-input formControlName="horas_trabajadas_U" type="number"
+       placeholder="Ingrese las Horas trabajadas por dia"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Cantidad de alimentos al dia</ion-label>
+      <ion-input formControlName="cantidad_alimentos_U" type="number"
+       placeholder="Ingrese la Cantidad de alimentos al dia"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Ultimos estudios</ion-label>
+      <ion-input formControlName="nivel_estudio_U" type="text"
+       placeholder="Ingrese sus ultimos estudios"></ion-input>
+    </ion-item>
+
+    
+      <ion-label>
+        Acuerdo de uso y confidencialidad de los datos <br><br>
+        <h5>
+        Que el Artículo 15 de la Constitución Política dispone que todas las personas tienen derecho a su intimidad personal y familiar y a su buen nombre, y el Estado debe respetarlos y hacerlos respetar. De igual modo, tienen derecho a conocer, actualizar y rectificar las informaciones que se hayan recogido sobre ellas en bancos de datos y en archivos de entidades públicas y privadas.
+      </h5><br>
+        <small>
+        Por tal motivo los datos personales de la población víctima contenidos en las herramientas tecnológicas o en cualquier mecanismo físico o digital, es el principal compromiso de todos los usuarios que accedan a ellos, toda vez que son catalogados como datos sensibles con carácter reservado y confidencial, y su tratamiento está sujeta a la normatividad aplicable.
+      </small>  <br>
+        Se encuentra de acuerdo con el tratamiento de sus datos. 
+        <br>
+        <ion-checkbox color="primary" slot="end" formControlName="Acepto"></ion-checkbox>
+        <ion-label> Acepto</ion-label>
+        
+      </ion-label>
+    
+
+    <ion-button expand="block" type="submit" [disabled]="!crearUsuarioFormulario.valid">Agregar Usuario</ion-button>
+  </form>
+
+</ion-content>

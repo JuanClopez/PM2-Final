@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Back" defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-tittle>Detalle de Paciente</ion-tittle>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Información del paciente</ion-card-title>
+      
+    </ion-card-header>
+    <img [src]="ruta" />
+
+    <ion-card-header>
+      <ion-card-subtitle>Nivel de Estres: {{ (test | async)?.nivel_U}}%</ion-card-subtitle>
+      
+    </ion-card-header>
+    <ion-card-content>
+      {{ (test | async)?.message_U}} <br>
+      <br>
+      {{ (user | async)?.nombre_U}}  {{ (user | async)?.apellido_U}}. <br>
+      Edad: {{ (user | async)?.edad_U}} años. <br>
+      Telefono: {{ (user | async)?.telefono_U}}. <br>
+      Estado civil: {{ (user | async)?.estado_civil_U}} <br>
+      Dirección: {{ (user | async)?.direccion_U}} <br>
+      Profesión: {{ (user | async)?.profesion_U}} <br>
+      Cargo: {{ (user | async)?.cargo_U}} <br>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="block" routerLink="/test">Test Estres</ion-button>
+  <ion-button expand="block" routerLink="/presion">Tomar Presion</ion-button>
+</ion-content>

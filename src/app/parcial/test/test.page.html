@@ -1,0 +1,161 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Back" defaultHref="/inicio"></ion-back-button>
+      <ion-title>Movil II</ion-title>
+    </ion-buttons>
+    <ion-title> </ion-title>
+    <ion-progress-bar [value]="avance" buffer="0.5"></ion-progress-bar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list-header>
+    <ion-label> Encuesta </ion-label>
+  </ion-list-header>
+  
+   
+
+
+  <form (ngSubmit)="submit()">
+    <ion-list>
+      <ion-item>
+        <ion-label class="ion-text-wrap">
+            {{pregunta[0].detalle}}
+        </ion-label>
+        <ion-select name="q1" placeholder="Seleccione" [(ngModel)]="q1" (ionChange)="progeso()" required>
+          <ion-select-option *ngFor="let opcion of opcion" [value]="opcion.id"
+            >{{opcion.detalle}}</ion-select-option
+          >
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="ion-text-wrap">
+          {{pregunta[1].detalle}}
+        </ion-label>
+        <ion-select name="q2" placeholder="Seleccione" [(ngModel)]="q2" (ionChange)="progeso()" required>
+          <ion-select-option *ngFor="let opcion of opcion" [value]="opcion.id"
+            >{{opcion.detalle}}</ion-select-option
+          >
+        </ion-select>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label class="ion-text-wrap">
+          {{pregunta[2].detalle}}
+        </ion-label>
+        <ion-select name="q3" placeholder="Seleccione" [(ngModel)]="q3" (ionChange)="progeso()" required>
+          <ion-select-option *ngFor="let opcion of opcion" [value]="opcion.id"
+            >{{opcion.detalle}}</ion-select-option
+          >
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="ion-text-wrap">
+          {{pregunta[3].detalle}}
+        </ion-label>
+        <ion-select name="q4" placeholder="Seleccione" [(ngModel)]="q4" (ionChange)="progeso()" required>
+          <ion-select-option *ngFor="let opcion of opcion" [value]="opcion.id"
+            >{{opcion.detalle}}</ion-select-option
+          >
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="ion-text-wrap">
+          {{pregunta[4].detalle}}
+        </ion-label>
+        <ion-select name="q5" placeholder="Seleccione" [(ngModel)]="q5" (ionChange)="progeso()" required>
+          <ion-select-option *ngFor="let opcion of opcion" [value]="opcion.id"
+            >{{opcion.detalle}}</ion-select-option
+          >
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="ion-text-wrap">
+          {{pregunta[5].detalle}} 
+        </ion-label>
+        <ion-select name="q6" placeholder="Seleccione" [(ngModel)]="q6" (ionChange)="progeso()" required>
+          <ion-select-option *ngFor="let opcion of opcion" [value]="opcion.id"
+            >{{opcion.detalle}}</ion-select-option
+          >
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="ion-text-wrap">
+          {{pregunta[6].detalle}} 
+        </ion-label>
+        <ion-select name="q7" placeholder="Seleccione" [(ngModel)]="q7" (ionChange)="progeso()" required>
+          <ion-select-option *ngFor="let opcion of opcion" [value]="opcion.id"
+            >{{opcion.detalle}}</ion-select-option
+          >
+        </ion-select>
+      </ion-item>
+
+     
+      <ion-item>
+        <ion-label class="ion-text-wrap"> {{pregunta[7].detalle}} </ion-label>
+        <ion-select name="q8" placeholder="Seleccione" [(ngModel)]="q8" (ionChange)="progeso()" required>
+          <ion-select-option *ngFor="let opcion of opcion" [value]="opcion.id"
+            >{{opcion.detalle}}</ion-select-option
+          >
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="ion-text-wrap">
+          {{pregunta[8].detalle}}
+        </ion-label>
+        <ion-select name="q9" placeholder="Seleccione" [(ngModel)]="q9" (ionChange)="progeso()" required>
+          <ion-select-option *ngFor="let opcion of opcion" [value]="opcion.id"
+            >{{opcion.detalle}}</ion-select-option
+          >
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="ion-text-wrap">
+          {{pregunta[9].detalle}}
+        </ion-label>
+        <ion-select name="q10" placeholder="Seleccione" [(ngModel)]="q10" (ionChange)="progeso()" required>
+          <ion-select-option *ngFor="let opcion of opcion" [value]="opcion.id"
+            >{{opcion.detalle}}</ion-select-option
+          >
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="ion-text-wrap">
+          {{pregunta[10].detalle}}
+        </ion-label>
+        <ion-select name="q11" placeholder="Seleccione" [(ngModel)]="q11" (ionChange)="progeso()" required>
+          <ion-select-option *ngFor="let opcion of opcion" [value]="opcion.id"
+            >{{opcion.detalle}}</ion-select-option
+          >
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="ion-text-wrap">
+          {{pregunta[11].detalle}}
+        </ion-label>
+        <ion-select name="q12" placeholder="Seleccione" [(ngModel)]="q12" (ionChange)="progeso()" required>
+          <ion-select-option *ngFor="let opcion of opcion" [value]="opcion.id"
+            >{{opcion.detalle}}</ion-select-option
+          >
+        </ion-select>
+      </ion-item>
+
+      
+      
+
+      <ion-button expand="full" type="submit">Terminar</ion-button>
+    </ion-list>
+  </form>
+
+
+</ion-content>

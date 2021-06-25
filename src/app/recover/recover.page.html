@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>recover</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="recoverForm" (ngSubmit)="recuperarUsuario($event)">
+    <h4> Registrar tu contraseña </h4>
+     <ion-item>
+       <ion-input formControlName="email" type="email" aria-placeholder="email" required></ion-input>
+     </ion-item>
+      <ion-chip color="danger" *ngIf="emailField.errors && emailField.dirty">  
+       <ion-label *ngIf=" emailField.hasError('email')"> email invalido  </ion-label>
+       <ion-label *ngIf=" emailField.hasError('required')"> el email es requerido  </ion-label>
+     </ion-chip>
+     <ion-button type="submit" expand="block"> Recuperar </ion-button>
+     <p> No estas registrado? <a routerLink="../register/"> registrate </a> </p>
+     <p> etas registrado? <a routerLink="../login/"> ingresa </a> </p>
+     
+   </form>
+
+</ion-content>
